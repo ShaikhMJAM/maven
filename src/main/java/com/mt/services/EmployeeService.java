@@ -1,8 +1,8 @@
 package com.mt.services;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class EmployeeService {
 
 	
-	@GetMapping("/getEmployeeDetails")
+	@GetMapping(value = "/getEmployeeDetails", produces = {MediaType.APPLICATION_JSON_VALUE}, consumes = {"application/json"})
 	@ResponseBody
 	public String uploadImage(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
 			throws JSONException {
