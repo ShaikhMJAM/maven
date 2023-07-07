@@ -21,7 +21,7 @@ public class EmployeeService {
 	@GetMapping(value = "/getEmployeeDetails", produces = {MediaType.APPLICATION_JSON_VALUE}, consumes = {"application/json"})
 	@ResponseBody
 	public String uploadImage(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
-			throws JSONException {
+			throws Exception {
 
 		JSONObject js = new JSONObject();
 		js.put("Name", "Mithun Technologies");
