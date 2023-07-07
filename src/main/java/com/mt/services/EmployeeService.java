@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class EmployeeService {
 
 	
-	@RequestMapping(value = "/getEmployeeDetails", method = RequestMethod.GET)
+	@GetMapping("/getEmployeeDetails")
 	@ResponseBody
 	public String uploadImage(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
 			throws JSONException {
